@@ -9,11 +9,11 @@ region: "ES"
 region: "FR"
 region: "IT"
 exemplar_chars {
-  base: "· a à b c ç d e é è f g h i í ï j k l m n o ó ò p q r s t u ú ü v w x y z"
-  auxiliary: "á ă â å ä ã ā æ ĕ ê ë ē ì ĭ î ī ŀ ñ º ŏ ô ö ø ō œ ù ŭ û ū ÿ"
+  base: "· A À B C Ç D E É È F G H I Í Ï J K L M N O Ó Ò P Q R S T U Ú Ü V W X Y Z a à b c ç d e é è f g h i í ï j k l m n o ó ò p q r s t u ú ü v w x y z"
+  auxiliary: "Á Ă Â Å Ä Ã Ā Æ Ĕ Ê Ë Ē Ì Ĭ Î Ī Ŀ Ñ Ŏ Ô Ö Ø Ō Œ Ù Ŭ Û Ū Ÿ á ă â å ä ã ā æ ĕ ê ë ē ì ĭ î ī ŀ ñ º ŏ ô ö ø ō œ ù ŭ û ū ÿ"
   marks: "◌̀ ◌́ ◌̈ ◌̧"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ¡ ? ¿ . … \' ‘ ’ \" “ ” « » ( ) [ ] § @ * / \\ & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ¡ ? ¿ . … \' ‘ ’ \" “ ” « » ( ) [ ] @ * / \\ & #"
   index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 }
 sample_text {

@@ -2,7 +2,6 @@ name: "Unbounded"
 designer: "NaN"
 license: "OFL"
 category: "SANS_SERIF"
-category: "DISPLAY"
 date_added: "2022-11-07"
 fonts {
   name: "Unbounded"
@@ -26,5 +25,19 @@ axes {
 }
 source {
   repository_url: "https://github.com/googlefonts/unbounded"
-  commit: "78f2d464776c37200bd2dc8437c1cf4eb2c6fc94"
+  commit: "f3ec43228a864a72487e41552e2140efab9884ea"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "fonts/variable/Unbounded[wght].ttf"
+    dest_file: "Unbounded[wght].ttf"
+  }
+  branch: "main"
 }
+minisite_url: "https://unbounded.polkadot.network/"

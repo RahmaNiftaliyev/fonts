@@ -9,11 +9,11 @@ region: "DK"
 region: "GL"
 region: "IS"
 exemplar_chars {
-  base: "a b c d e f g h i j k l m n o p q r s t u v w x y z æ ø å"
-  auxiliary: "á à â ç é è ê ë í î ï ñ ó ô œ ú ù û ÿ ü ä ǿ ö"
+  base: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ø Å a b c d e f g h i j k l m n o p q r s t u v w x y z æ ø å"
+  auxiliary: "Á À Â Ç É È Ê Ë Í Î Ï Ñ Ó Ô Œ Ú Ù Û Ÿ Ü Ä Ǿ Ö á à â ç é è ê ë í î ï ñ ó ô œ ú ù û ÿ ü ä ǿ ö"
   marks: "◌̊ ◌́"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] § @ * / & # † ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] @ * / & #"
   index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ø Å"
 }
 sample_text {

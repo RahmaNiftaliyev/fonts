@@ -24,10 +24,11 @@ In crafting the 28 basic letters of the alphabet (many of which are preserved in
 
 <figure>
 
-![28 different Hangeul letters.](images/hangeul_2_fig_1.svg)
+![24 different Hangeul letters.](images/hangeul_2_fig_1.svg)
+
+<figcaption>An example of 24 different Hangeul letters, similar in appearance to what they would have looked like when originally created.</figcaption>
 
 </figure>
-<figcaption>An example of 28 different Hangeul letters, similar in appearance to what they would have looked like when originally created.</figcaption>
 
 Geometry certainly isn’t a requirement for letter design, and it’s fair to say that humankind has produced alphabets that are aesthetically marvelous.
 
@@ -49,8 +50,9 @@ The vowel letters, on the other hand, are simpler, consisting of a single vertic
 
 ![Some Korean Consonant and Vowel letters.](images/hangeul_2_fig_2.svg)
 
-</figure>
 <figcaption>Examples of Korean Consonant and Vowel letters illustrating visual distinction.</figcaption>
+
+</figure>
 
 This visual treatment has the effect of signaling differences between the groups of vowel and consonant letters.
 
@@ -70,8 +72,9 @@ In particular, he avoided letters that were vertical or horizontal mirror images
 
 ![Example of existing and rejected letters.](images/thumbnail.svg)
 
-</figure>
 <figcaption>Top row showing existing Hangeul letters; bottom row showing mirrored versions that were rejected.</figcaption>
+
+</figure>
 
 People who have learned the English alphabet might not be surprised to discover that among the most commonly confused letters are those that seem to be mirrored copies, including the [lowercase](/glossary/uppercase_lowercase) letters *d*, *b*, *p*, and *q* (Ehri & Roberts, 2006).
 

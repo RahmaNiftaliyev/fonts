@@ -6,11 +6,11 @@ autonym: "Brezhoneg"
 population: 563140
 region: "FR"
 exemplar_chars {
-  base: "a b {cʼh} {ch} d e ê f g h i j k l m n ñ o p r s t u ù v w x y z"
-  auxiliary: "á à ă â å ä ã ā æ c ç é è ĕ ë ē í ì ĭ î ï ī ó ò ŏ ô ö ø ō œ q ú ŭ û ü ū ÿ"
+  base: "A B {CʼH} {CH} D E Ê F G H I J K L M N Ñ O P R S T U Ù V W X Y Z a b {cʼh} {ch} d e ê f g h i j k l m n ñ o p r s t u ù v w x y z"
+  auxiliary: "Á À Ă Â Å Ä Ã Ā Æ C Ç É È Ĕ Ë Ē Í Ì Ĭ Î Ï Ī Ó Ò Ŏ Ô Ö Ø Ō Œ Q Ú Ŭ Û Ü Ū Ÿ á à ă â å ä ã ā æ c ç é è ĕ ë ē í ì ĭ î ï ī ó ò ŏ ô ö ø ō œ q ú ŭ û ü ū ÿ"
   marks: "◌̀ ◌̂ ◌̃"
-  numerals: "  - ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‑ , ; : ! ? . ( ) [ ] { }"
+  numerals: "- , % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- , ; : ! ? . ( ) [ ] { }"
   index: "A B C D E F G H I J K L M N O P R S T U V W X Y Z"
 }
 sample_text {

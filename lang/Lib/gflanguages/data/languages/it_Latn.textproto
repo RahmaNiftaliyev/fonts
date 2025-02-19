@@ -20,11 +20,11 @@ region: "SM"
 region: "US"
 region: "VA"
 exemplar_chars {
-  base: "a à b c d e é è f g h i ì j k l m n o ó ò p q r s t u ù v w x y z"
-  auxiliary: "ª á â å ä ã æ ç ê ë í î ï ñ º ô ö õ ø œ ß ú û ü ÿ"
+  base: "A À B C D E É È F G H I Ì J K L M N O Ó Ò P Q R S T U Ù V W X Y Z a à b c d e é è f g h i ì j k l m n o ó ò p q r s t u ù v w x y z"
+  auxiliary: "ª Á Â Å Ä Ã Æ Ç Ê Ë Í Î Ï Ñ Ô Ö Õ Ø Œ ẞ Ú Û Ü Ÿ á â å ä ã æ ç ê ë í î ï ñ º ô ö õ ø œ ß ú û ü ÿ"
   marks: "◌̀ ◌́ ◌̂ ◌̈"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‑ — , ; : ! ? . … \' ’ \" “ ” « » ( ) [ ] { } @ /"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- — , ; : ! ? . … \' ’ \" “ ” « » ( ) [ ] { } @ /"
   index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 }
 sample_text {

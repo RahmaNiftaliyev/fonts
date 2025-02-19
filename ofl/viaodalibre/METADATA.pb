@@ -1,5 +1,5 @@
 name: "Viaoda Libre"
-designer: "Gydient, Vietanh Nguyen"
+designer: "Gydient, ViệtAnh Nguyễn"
 license: "OFL"
 category: "DISPLAY"
 date_added: "2019-11-05"
@@ -18,3 +18,8 @@ subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
 subsets: "vietnamese"
+source {
+  repository_url: "https://github.com/bettergui/ViaodaLibre"
+}
+stroke: "SERIF"
+classifications: "DISPLAY"

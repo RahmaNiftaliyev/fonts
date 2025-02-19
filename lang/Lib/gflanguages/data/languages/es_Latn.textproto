@@ -42,11 +42,11 @@ region: "US"
 region: "UY"
 region: "VE"
 exemplar_chars {
-  base: "a á b c d e é f g h i í j k l m n ñ o ó p q r s t u ú ü v w x y z"
-  auxiliary: "ª à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī º ò ŏ ô ö ø ō œ ù ŭ û ū ý ÿ"
+  base: "A Á B C D E É F G H I Í J K L M N Ñ O Ó P Q R S T U Ú Ü V W X Y Z a á b c d e é f g h i í j k l m n ñ o ó p q r s t u ú ü v w x y z"
+  auxiliary: "À Ă Â Å Ä Ã Ā Æ Ç È Ĕ Ê Ë Ē Ì Ĭ Î Ï Ī Ò Ŏ Ô Ö Ø Ō Œ Ù Ŭ Û Ū Ý Ÿ ª à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī º ò ŏ ô ö ø ō œ ù ŭ û ū ý ÿ"
   marks: "◌́ ◌̃ ◌̈"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ¡ ? ¿ . … \' ‘ ’ \" “ ” « » ( ) [ ] § @ * / \\ & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ¡ ? ¿ . … \' ‘ ’ \" “ ” « » ( ) [ ] @ * / \\ & #"
   index: "A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z"
 }
 sample_text {

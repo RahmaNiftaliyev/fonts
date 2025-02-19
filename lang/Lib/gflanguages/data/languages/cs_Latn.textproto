@@ -7,11 +7,11 @@ population: 13045532
 region: "CZ"
 region: "SK"
 exemplar_chars {
-  base: "a á b c č d ď e é ě f g h {ch} i í j k l m n ň o ó p q r ř s š t ť u ú ů v w x y ý z ž"
-  auxiliary: "à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī ľ ł ñ ò ŏ ô ö ø ō œ ŕ ù ŭ û ü ū ÿ"
+  base: "A Á B C Č D Ď E É Ě F G H {CH} I Í J K L M N Ň O Ó P Q R Ř S Š T Ť U Ú Ů V W X Y Ý Z Ž a á b c č d ď e é ě f g h {ch} i í j k l m n ň o ó p q r ř s š t ť u ú ů v w x y ý z ž"
+  auxiliary: "À Ă Â Å Ä Ã Ā Æ Ç È Ĕ Ê Ë Ē Ì Ĭ Î Ï Ī Ľ Ł Ñ Ò Ŏ Ô Ö Ø Ō Œ Ŕ Ù Ŭ Û Ü Ū Ÿ à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī ľ ł ñ ò ŏ ô ö ø ō œ ŕ ù ŭ û ü ū ÿ"
   marks: "◌́ ◌̊ ◌̌"
-  numerals: "  - ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – , ; : ! ? . … ‘ ‚ “ „ ( ) [ ] § @ * / &"
+  numerals: "- , % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – , ; : ! ? . … ‘ ‚ “ „ ( ) [ ] @ * / &"
   index: "A B C Č D E F G H {CH} I J K L M N O P Q R Ř S Š T U V W X Y Z Ž"
 }
 sample_text {

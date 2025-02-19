@@ -6,11 +6,11 @@ autonym: "Lëtzebuergesch"
 population: 421015
 region: "LU"
 exemplar_chars {
-  base: "a ä b c d e é ë f g h i j k l m n o p q r s t u v w x y z"
-  auxiliary: "á à ă â å ã ā æ ç è ĕ ê ē ğ í ì ĭ î ï İ ī ı ñ ó ò ŏ ô ö ø ō œ ş ß ú ù ŭ û ü ū ÿ"
+  base: "A Ä B C D E É Ë F G H I J K L M N O P Q R S T U V W X Y Z a ä b c d e é ë f g h i j k l m n o p q r s t u v w x y z"
+  auxiliary: "Á À Ă Â Å Ã Ā Æ Ç È Ĕ Ê Ē Ğ Í Ì Ĭ Î Ï İ Ī I Ñ Ó Ò Ŏ Ô Ö Ø Ō Œ Ş ẞ Ú Ù Ŭ Û Ü Ū Ÿ á à ă â å ã ā æ ç è ĕ ê ē ğ í ì ĭ î ï ī ı ñ ó ò ŏ ô ö ø ō œ ş ß ú ù ŭ û ü ū ÿ"
   marks: "◌̀ ◌́ ◌̂ ◌̈"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … \' ‘ ‚ \" “ „ « » ( ) [ ] { } § @ * / & #"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … \' ‘ ‚ \" “ „ « » ( ) [ ] { } @ * / & #"
   index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 }
 sample_text {

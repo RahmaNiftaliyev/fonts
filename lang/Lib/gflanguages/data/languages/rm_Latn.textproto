@@ -6,10 +6,10 @@ autonym: "Rumantsch"
 population: 42019
 region: "CH"
 exemplar_chars {
-  base: "a à b c d e é è f g h i ì j k l m n o ò p q r s t u ù v w x y z"
-  auxiliary: "á ă â å ä ā æ ç ĕ ê ë ē í ĭ î ï ī ñ ó ŏ ô ö ø ō œ ú ŭ û ü ū ÿ"
+  base: "A À B C D E É È F G H I Ì J K L M N O Ò P Q R S T U Ù V W X Y Z a à b c d e é è f g h i ì j k l m n o ò p q r s t u ù v w x y z"
+  auxiliary: "Á Ă Â Å Ä Ā Æ Ç Ĕ Ê Ë Ē Í Ĭ Î Ï Ī Ñ Ó Ŏ Ô Ö Ø Ō Œ Ú Ŭ Û Ü Ū Ÿ á ă â å ä ā æ ç ĕ ê ë ē í ĭ î ï ī ñ ó ŏ ô ö ø ō œ ú ŭ û ü ū ÿ"
   marks: "◌̀ ◌́ ◌̂ ◌̈"
-  numerals: ". ’ % ‰ + − 0 1 2 3 4 5 6 7 8 9"
+  numerals: ". ’ % + − 0 1 2 3 4 5 6 7 8 9"
   index: "A À B C D E É È F G H I Ì J K L M N O Ò P Q R S T U Ù V W X Y Z"
 }
 sample_text {

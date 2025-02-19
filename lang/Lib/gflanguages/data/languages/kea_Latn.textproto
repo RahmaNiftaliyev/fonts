@@ -6,11 +6,11 @@ autonym: "Kabuverdianu"
 population: 530762
 region: "CV"
 exemplar_chars {
-  base: "a b d {dj} e f g h i j k l {lh} m n ñ {nh} o p r s t {tx} u v x y z"
-  auxiliary: "ª á à ă â å ä ã ā æ c ç é è ĕ ê ë ẽ ē í ì ĭ î ï ĩ ī {n̈} º ó ò ŏ ô ö õ ø ō œ q {rr} ú ù ŭ û ü ũ ū w ÿ"
+  base: "A B D {DJ} E F G H I J K L {LH} M N Ñ {NH} O P R S T {TX} U V X Y Z a b d {dj} e f g h i j k l {lh} m n ñ {nh} o p r s t {tx} u v x y z"
+  auxiliary: "Á À Â Ã C Ç É È Ê Í Ì Î {N̈} Ó Ò Ô Õ Q {RR} Ú Ù Û W ª á à â ã c ç é è ê í ì î {n̈} º ó ò ô q {rr} ú ù û w"
   marks: "◌̀ ◌́ ◌̂ ◌̃ ◌̈ ◌̧"
-  numerals: "  - ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … \' ‘ ’ \" “ ” « » ( ) [ ] § @ * / & # † ‡"
+  numerals: "- , % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … \' ‘ ’ \" “ ” « » ( ) [ ] @ * / & # "
   index: "A B D E F G H I J K L M N O P R S T U V X Z"
 }
 sample_text {

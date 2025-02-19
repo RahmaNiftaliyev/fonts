@@ -6,11 +6,11 @@ autonym: "Asturianu"
 population: 650205
 region: "ES"
 exemplar_chars {
-  base: "a á b c d e é f g h ḥ i í l ḷ m n ñ o ó p q r s t u ú ü v x y z"
-  auxiliary: "ª à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī j k º ò ŏ ô ö ø ō œ ù ŭ û ū w ÿ"
+  base: "A Á B C D E É F G H Ḥ I Í L Ḷ M N Ñ O Ó P Q R S T U Ú Ü V X Y Z a á b c d e é f g h ḥ i í l ḷ m n ñ o ó p q r s t u ú ü v x y z"
+  auxiliary: "À Ă Â Å Ä Ã Ā Æ Ç È Ĕ Ê Ë Ē Ì Ĭ Î Ï Ī J K Ò Ŏ Ô Ö Ø Ō Œ Ù Ŭ Û Ū W Ÿ ª à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī j k º ò ŏ ô ö ø ō œ ù ŭ û ū w ÿ"
   marks: "◌́ ◌̃ ◌̈ ◌̣"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ¡ ? ¿ . … \' ‘ ’ \" “ ” « » ( ) [ ] § @ * / \\ & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ¡ ? ¿ . … \' ‘ ’ \" “ ” « » ( ) [ ] @ * / \\ & #"
   index: "A B C D E F G H I L M N Ñ O P Q R S T U V X Y Z"
 }
 sample_text {

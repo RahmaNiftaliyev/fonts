@@ -67,11 +67,11 @@ region: "VU"
 region: "WF"
 region: "YT"
 exemplar_chars {
-  base: "a à â æ b c ç d e é è ê ë f g h i î ï j k l m n o ô œ p q r s t u ù û ü v w x y ÿ z"
-  auxiliary: "á å ä ã ā ć ē í ì ī ĳ ñ ó ò ö õ ø ř š ſ ß ú ǔ"
+  base: "A À Â Æ B C Ç D E É È Ê Ë F G H I Î Ï J K L M N O Ô Œ P Q R S T U Ù Û Ü V W X Y Ÿ Z a à â æ b c ç d e é è ê ë f g h i î ï j k l m n o ô œ p q r s t u ù û ü v w x y ÿ z"
+  auxiliary: "Á Å Ä Ã Ā Ć Ē Í Ì Ī Ñ Ó Ò Ö Õ Ø Ř Š S ẞ Ú Ǔ á å ä ã ā ć ē í ì ī ñ ó ò ö õ ø ř š ſ ß ú ǔ"
   marks: "◌̀ ◌́ ◌̂ ◌̈ ◌̧"
-  numerals: "  - ‑ , . % ‰ + − 0 1 2 ² 3 ³ 4 5 6 7 8 9 ᵈ ᵉ ʳ ˢ"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … ’ \" “ ” « » ( ) [ ] § @ * / & # † ‡"
+  numerals: "- , . % + − 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … ’ \" “ ” « » ( ) [ ] @ * / & # "
   index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 }
 sample_text {

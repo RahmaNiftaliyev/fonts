@@ -10,10 +10,35 @@ fonts {
   filename: "NotoSansMeroitic-Regular.ttf"
   post_script_name: "NotoSansMeroitic-Regular"
   full_name: "Noto Sans Meroitic Regular"
-  copyright: "Copyright 2017 Google Inc. All Rights Reserved."
+  copyright: "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/meroitic)"
 }
+subsets: "latin"
+subsets: "latin-ext"
 subsets: "menu"
 subsets: "meroitic"
+subsets: "meroitic-cursive"
+subsets: "meroitic-hieroglyphs"
+source {
+  repository_url: "https://github.com/notofonts/meroitic"
+  archive_url: "https://github.com/notofonts/meroitic/releases/download/NotoSansMeroitic-v2.002/NotoSansMeroitic-v2.002.zip"
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "ARTICLE.en_us.html"
+    dest_file: "article/ARTICLE.en_us.html"
+  }
+  files {
+    source_file: "NotoSansMeroitic/googlefonts/ttf/NotoSansMeroitic-Regular.ttf"
+    dest_file: "NotoSansMeroitic-Regular.ttf"
+  }
+  branch: "main"
+}
 is_noto: true
 languages: "xmr_Mero"  # Meroitic, Meroitic Hieroglyphs
 sample_text {
@@ -25,3 +50,4 @@ sample_text {
   poster_md: "𐦣𐦤𐦥𐦦𐦮𐦯𐦰 𐦾𐦿𐦧"
   poster_lg: "𐦀𐦁𐦂"
 }
+primary_script: "Mero"

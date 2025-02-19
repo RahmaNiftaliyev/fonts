@@ -8,10 +8,10 @@ region: "FI"
 region: "NO"
 region: "SE"
 exemplar_chars {
-  base: "a á b c č d đ e f g h i j k l m n ŋ o p r s š t ŧ u v z ž"
-  auxiliary: "à ç é è í ń ñ ó ò q ú w x y ü ø æ å ä ã ö"
+  base: "A Á B C Č D Đ E F G H I J K L M N Ŋ O P R S Š T Ŧ U V Z Ž a á b c č d đ e f g h i j k l m n ŋ o p r s š t ŧ u v z ž"
+  auxiliary: "À Ç É È Í Ń Ñ Ó Ò Q Ú W X Y Ü Ø Æ Å Ä Ã Ö à ç é è í ń ñ ó ò q ú w x y ü ø æ å ä ã ö"
   marks: "◌́ ◌̈ ◌̊ ◌̌"
-  numerals: "  , % ‰ + − 0 1 2 3 4 5 6 7 8 9"
+  numerals: ", % + − 0 1 2 3 4 5 6 7 8 9"
   index: "A Á B C Č D Đ E É F G H I J K L M N Ŋ O P Q R S Š T Ŧ U V W X Y Z Ž Ø Æ Å Ä Ö"
 }
 sample_text {

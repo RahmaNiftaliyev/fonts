@@ -29,8 +29,8 @@ subsets: "menu"
 subsets: "vietnamese"
 axes {
   tag: "YTLC"
-  min_value: 0.0
-  max_value: 1000.0
+  min_value: 440.0
+  max_value: 540.0
 }
 axes {
   tag: "opsz"
@@ -53,5 +53,18 @@ registry_default_overrides {
 }
 source {
   repository_url: "https://github.com/googlefonts/NunitoSans"
-  commit: "73d683402938807e66c5aae4440eabe517a469de"
+  commit: "058bd7a2f33d6ad5ef1df985b3db403622016a8c"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/variable/NunitoSans[YTLC,opsz,wdth,wght].ttf"
+    dest_file: "NunitoSans[YTLC,opsz,wdth,wght].ttf"
+  }
+  files {
+    source_file: "fonts/variable/NunitoSans-Italic[YTLC,opsz,wdth,wght].ttf"
+    dest_file: "NunitoSans-Italic[YTLC,opsz,wdth,wght].ttf"
+  }
+  branch: "main"
 }

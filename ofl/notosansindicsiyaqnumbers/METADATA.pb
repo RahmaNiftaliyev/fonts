@@ -10,10 +10,33 @@ fonts {
   filename: "NotoSansIndicSiyaqNumbers-Regular.ttf"
   post_script_name: "NotoSansIndicSiyaqNumbers-Regular"
   full_name: "Noto Sans Indic Siyaq Numbers Regular"
-  copyright: "Copyright 2019 Google Inc. All Rights Reserved."
+  copyright: "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/indic-siyaq-numbers)"
 }
-subsets: "menu"
 subsets: "indic-siyaq-numbers"
+subsets: "latin"
+subsets: "latin-ext"
+subsets: "menu"
+source {
+  repository_url: "https://github.com/notofonts/indic-siyaq-numbers"
+  archive_url: "https://github.com/notofonts/indic-siyaq-numbers/releases/download/NotoSansIndicSiyaqNumbers-v2.002/NotoSansIndicSiyaqNumbers-v2.002.zip"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "ARTICLE.en_us.html"
+    dest_file: "article/ARTICLE.en_us.html"
+  }
+  files {
+    source_file: "DESCRIPTION.en_us.html"
+    dest_file: "DESCRIPTION.en_us.html"
+  }
+  files {
+    source_file: "NotoSansIndicSiyaqNumbers/googlefonts/ttf/NotoSansIndicSiyaqNumbers-Regular.ttf"
+    dest_file: "NotoSansIndicSiyaqNumbers-Regular.ttf"
+  }
+  branch: "main"
+}
 is_noto: true
 sample_text {
   masthead_full: "٠𞲇𞱿𞱸"
@@ -24,3 +47,4 @@ sample_text {
   poster_md: "𞲝𞲉𞲊𞲋𞲃𞲄𞲅"
   poster_lg: "ا٠١"
 }
+primary_script: "Arab"

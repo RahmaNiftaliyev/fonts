@@ -32,12 +32,13 @@ region: "SI"
 region: "SK"
 region: "US"
 exemplar_chars {
-  base: "a ä b c d e f g h i j k l m n o ö p q r s ß t u ü v w x y z"
-  auxiliary: "á à ă â å ã ā æ ç é è ĕ ê ë ē ğ í ì ĭ î ï İ ī ı ñ ó ò ŏ ô ø ō œ ş ú ù ŭ û ū ÿ"
+  base: "A Ä B C D E F G H I J K L M N O Ö P Q R S ẞ T U Ü V W X Y Z a ä b c d e f g h i j k l m n o ö p q r s ß t u ü v w x y z"
+  auxiliary: "Á À Ă Â Å Ã Ā Æ Ç É È Ĕ Ê Ë Ē Ğ Í Ì Ĭ Î Ï İ Ī I Ñ Ó Ò Ŏ Ô Ø Ō Œ Ş S Ú Ù Ŭ Û Ū Ÿ á à ă â å ã ā æ ç é è ĕ ê ë ē ğ í ì ĭ î ï ī ı ñ ó ò ŏ ô ø ō œ ş ſ ú ù ŭ û ū ÿ"
   marks: "◌̈ ◌̀ ◌́"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … \' ‘ ‚ \" “ „ « » ( ) [ ] { } § @ * / & #"
-  index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … \' ‘ ‚ \" “ „ « » ( ) [ ] { } @ * / & #"
+  index: "A B C D E F G H I J K L M N O P Q R S ẞ T U V W X Y Z"
+  not_required: "ẞ"
 }
 sample_text {
   masthead_full: "AaLl"

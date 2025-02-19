@@ -7,9 +7,9 @@ population: 11376
 region: "CH"
 region: "LI"
 exemplar_chars {
-  base: "a á ä ã b c č d e é f g h i í j k l m n o ó ö õ p q r s š t u ú ü ũ v w x y z"
-  auxiliary: "à ă â å ā æ ç è ĕ ê ë ē ì ĭ î ï ī ñ ò ŏ ô ø ō œ ß ù ŭ û ū ÿ"
+  base: "A Á Ä Ã B C Č D E É F G H I Í J K L M N O Ó Ö Õ P Q R S Š T U Ú Ü Ũ V W X Y Z a á ä ã b c č d e é f g h i í j k l m n o ó ö õ p q r s š t u ú ü ũ v w x y z"
+  auxiliary: "À Ă Â Å Ā Æ Ç È Ĕ Ê Ë Ē Ì Ĭ Î Ï Ī Ñ Ò Ŏ Ô Ø Ō Œ ẞ Ù Ŭ Û Ū Ÿ à ă â å ā æ ç è ĕ ê ë ē ì ĭ î ï ī ñ ò ŏ ô ø ō œ ß ù ŭ û ū ÿ"
   marks: "◌́ ◌̃ ◌̈ ◌̌ ◌̀ ◌̂ ◌̄ ◌̆ ◌̊ ◌̧"
-  numerals: "- ‑ , ’ % ‰ + 0 1 2 3 4 5 6 7 8 9"
+  numerals: "- , ’ % + 0 1 2 3 4 5 6 7 8 9"
   index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 }

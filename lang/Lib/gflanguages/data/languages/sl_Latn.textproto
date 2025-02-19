@@ -9,11 +9,11 @@ region: "HU"
 region: "IT"
 region: "SI"
 exemplar_chars {
-  base: "a b c č d e f g h i j k l m n o p r s š t u v z ž"
-  auxiliary: "á à ă â å ä ā æ ç ć đ é è ĕ ê ë ē í ì ĭ î ï ī ñ ó ò ŏ ô ö ø ō œ q ú ù ŭ û ü ū w x y ÿ"
+  base: "A B C Č D E F G H I J K L M N O P R S Š T U V Z Ž a b c č d e f g h i j k l m n o p r s š t u v z ž"
+  auxiliary: "Á À Ă Â Å Ä Ā Æ Ç Ć Đ É È Ĕ Ê Ë Ē Í Ì Ĭ Î Ï Ī Ñ Ó Ò Ŏ Ô Ö Ø Ō Œ Q Ú Ù Ŭ Û Ü Ū W X Y Ÿ á à ă â å ä ā æ ç ć đ é è ĕ ê ë ē í ì ĭ î ï ī ñ ó ò ŏ ô ö ø ō œ q ú ù ŭ û ü ū w x y ÿ"
   marks: "◌́ ◌̈ ◌̌"
-  numerals: ", . % ‰ + − 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‑ – , ; : ! ? . … \' \" „ ‟ « » ( ) [ ] { } @ *"
+  numerals: ", . % + − 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – , ; : ! ? . … \' \" „ ‟ « » ( ) [ ] { } @ *"
   index: "A B C Č Ć D Đ E F G H I J K L M N O P Q R S Š T U V W X Y Z Ž"
 }
 sample_text {

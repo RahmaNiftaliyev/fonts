@@ -3,12 +3,15 @@ language: "no"
 script: "Latn"
 name: "Norwegian"
 autonym: "Norsk"
-population: 0
+population: 4320000
+region: "NO"
 exemplar_chars {
-  base: "a à b c d e é f g h i j k l m n o ó ò ô p q r s t u v w x y z æ ø å"
-  auxiliary: "á ǎ ã č ç đ è ê í ń ñ ŋ š ŧ ú ü ž ä ö"
+  base: "A B C D E É È Ê F G H I J K L M N O Ó Ò Ô P Q R S T U V W X Y Z Æ Ø Å a à b c d e é è ê f g h i j k l m n o ó ò ô p q r s t u v w x y z æ ø å"
+  auxiliary: "À Á Ǎ Ã Č Ç Đ È Ê Í Ń Ñ Ŋ Š Ŧ Ú Ü Ž Ä Ö á ǎ ã č ç đ è ê í ń ñ ŋ š ŧ ú ü ž ä ö"
   marks: "◌̀ ◌́ ◌̂ ◌̈ ◌̊"
-  numerals: "  , % ‰ + − 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‑ – , ; : ! ? . \' \" « » ( ) [ ] { } § @ * / \\"
+  numerals: ", % + − 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – , ; : ! ? . \' \" « » ( ) [ ] { } @ * / \\"
   index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ø Å"
 }
+source: "Erik Bolstad, “Norsk alfabet”, Store norske leksikon, 2022, https://snl.no/norsk_alfabet"
+source: "Hanne Gram Simonsen, “Aksenttegn og andre diakritiske tegn”, Store norske leksikon, 2022, https://snl.no/aksenttegn_og_andre_diakritiske_tegn"

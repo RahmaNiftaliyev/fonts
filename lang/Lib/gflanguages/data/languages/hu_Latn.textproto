@@ -13,11 +13,11 @@ region: "SI"
 region: "SK"
 region: "UA"
 exemplar_chars {
-  base: "a á b c {cs} {ccs} d {dz} {ddz} {dzs} {ddzs} e é f g {gy} {ggy} h i í j k l {ly} {lly} m n {ny} {nny} o ó ö ő p r s {sz} {ssz} t {ty} {tty} u ú ü ű v z {zs} {zzs}"
-  auxiliary: "à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī ñ ò ŏ ô ø ō œ q ù ŭ û ū w x y ÿ"
+  base: "A Á B C {CS} {CCS} D {DZ} {DDZ} {DZS} {DDZS} E É F G {GY} {GGY} H I Í J K L {LY} {LLY} M N {NY} {NNY} O Ó Ö Ő P R S {SZ} {SSZ} T {TY} {TTY} U Ú Ü Ű V Z {ZS} {ZZS} a á b c {cs} {ccs} d {dz} {ddz} {dzs} {ddzs} e é f g {gy} {ggy} h i í j k l {ly} {lly} m n {ny} {nny} o ó ö ő p r s {sz} {ssz} t {ty} {tty} u ú ü ű v z {zs} {zzs}"
+  auxiliary: "À Ă Â Å Ä Ã Ā Æ Ç È Ĕ Ê Ë Ē Ì Ĭ Î Ï Ī Ñ Ò Ŏ Ô Ø Ō Œ Q Ù Ŭ Û Ū W X Y Ÿ à ă â å ä ã ā æ ç è ĕ ê ë ē ì ĭ î ï ī ñ ò ŏ ô ø ō œ q ù ŭ û ū w x y ÿ"
   marks: "◌́ ◌̈ ◌̋"
-  numerals: "  - ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‑ – , ; : ! ? . … \' ’ \" ” „ « » ( ) [ ] { } ⟨ ⟩ § @ * / & # ~ ⁒"
+  numerals: "- , % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – , ; : ! ? . … \' ’ \" ” „ « » ( ) [ ] { } @ * / & # ~ "
   index: "A Á B C {CS} D {DZ} {DZS} E É F G {GY} H I Í J K L {LY} M N {NY} O Ó Ö Ő P Q R S {SZ} T {TY} U Ú Ü Ű V W X Y Z {ZS}"
 }
 sample_text {

@@ -9,11 +9,11 @@ region: "HU"
 region: "RS"
 region: "SK"
 exemplar_chars {
-  base: "a á ä b c č d ď {dz} {dž} e é f g h {ch} i í j k l ĺ ľ m n ň o ó ô p q r ŕ s š t ť u ú v w x y ý z ž"
-  auxiliary: "à ă â å ā æ ç è ĕ ê ë ē ì ĭ î ï ī ñ ò ŏ ö ő ø ō œ ř ù ŭ û ü ű ū ÿ"
+  base: "A Á Ä B C Č D Ď {DZ} {DŽ} E É F G H {CH} I Í J K L Ĺ Ľ M N Ň O Ó Ô P Q R Ŕ S Š T Ť U Ú V W X Y Ý Z Ž a á ä b c č d ď {dz} {dž} e é f g h {ch} i í j k l ĺ ľ m n ň o ó ô p q r ŕ s š t ť u ú v w x y ý z ž"
+  auxiliary: "À Ă Â Å Ā Æ Ç È Ĕ Ê Ë Ē Ì Ĭ Î Ï Ī Ñ Ò Ŏ Ö Ő Ø Ō Œ Ř Ù Ŭ Û Ü Ű Ū Ÿ à ă â å ā æ ç è ĕ ê ë ē ì ĭ î ï ī ñ ò ŏ ö ő ø ō œ ř ù ŭ û ü ű ū ÿ"
   marks: "◌́ ◌̂ ◌̈ ◌̌"
-  numerals: "  - ‑ , % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – , ; : ! ? . … ‘ ‚ “ „ ( ) [ ] § @ * / &"
+  numerals: "- , % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – , ; : ! ? . … ‘ ‚ “ „ ( ) [ ] @ * / &"
   index: "A Ä B C Č D Ď E F G H {CH} I J K L Ľ M N O Ô P Q R S Š T Ť U V W X Y Z Ž"
 }
 sample_text {

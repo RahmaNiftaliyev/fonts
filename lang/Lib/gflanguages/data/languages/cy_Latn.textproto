@@ -7,11 +7,11 @@ population: 536376
 region: "AR"
 region: "GB"
 exemplar_chars {
-  base: "a á à â ä b c {ch} d {dd} e é è ê ë f {ff} g {ng} h i í ì î ï j l {ll} m n o ó ò ô ö p {ph} r {rh} s t {th} u ú ù û ü w ẃ ẁ ŵ ẅ y ý ỳ ŷ ÿ"
-  auxiliary: "ă å ã ā æ ç ĕ ē ĭ ī k ñ ŏ ø ō œ q ŭ ū v x z"
+  base: "A Á À Â Ä B C {CH} D {DD} E É È Ê Ë F {FF} G {NG} H I Í Ì Î Ï J L {LL} M N O Ó Ò Ô Ö P {PH} R {RH} S T {TH} U Ú Ù Û Ü W Ẃ Ẁ Ŵ Ẅ Y Ý Ỳ Ŷ Ÿ a á à â ä b c {ch} d {dd} e é è ê ë f {ff} g {ng} h i í ì î ï j l {ll} m n o ó ò ô ö p {ph} r {rh} s t {th} u ú ù û ü w ẃ ẁ ŵ ẅ y ý ỳ ŷ ÿ"
+  auxiliary: "Ă Å Ã Ā Æ Ç Ĕ Ē Ĭ Ī K Ñ Ŏ Ø Ō Œ Q Ŭ Ū V X Z ă å ã ā æ ç ĕ ē ĭ ī k ñ ŏ ø ō œ q ŭ ū v x z"
   marks: "◌̀ ◌́ ◌̂ ◌̈"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] § @ * / & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] @ * / & #"
   index: "A B C {CH} D {DD} E F {FF} G {NG} H I J K L {LL} M N O P {PH} Q R {RH} S T {TH} U V W X Y Z"
 }
 sample_text {

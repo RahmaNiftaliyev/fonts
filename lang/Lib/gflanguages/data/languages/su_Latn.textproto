@@ -6,11 +6,11 @@ autonym: "Basa Sunda"
 population: 32043120
 region: "ID"
 exemplar_chars {
-  base: "a b c d e é f g h i j k l m n o p q r s t u v w x y z"
-  auxiliary: "á à ă â å ä ã ā æ ç è ĕ ê ë ē í ì ĭ î ï ī ñ ó ò ŏ ô ö ø ō œ ú ù ŭ û ü ū ÿ"
+  base: "A B C D E É F G H I J K L M N O P Q R S T U V W X Y Z a b c d e é f g h i j k l m n o p q r s t u v w x y z"
+  auxiliary: "Á À Ă Â Å Ä Ã Ā Æ Ç È Ĕ Ê Ë Ē Í Ì Ĭ Î Ï Ī Ñ Ó Ò Ŏ Ô Ö Ø Ō Œ Ú Ù Ŭ Û Ü Ū Ÿ á à ă â å ä ã ā æ ç è ĕ ê ë ē í ì ĭ î ï ī ñ ó ò ŏ ô ö ø ō œ ú ù ŭ û ü ū ÿ"
   marks: "◌́"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] § @ * / & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] @ * / & #"
   index: "A B C D E É F G H I J K L M N O P Q R S T U V W X Y Z"
 }
 sample_text {

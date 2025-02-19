@@ -26,5 +26,18 @@ subsets: "latin-ext"
 subsets: "menu"
 source {
   repository_url: "https://github.com/anrt-type/ANRT-Baskervville"
-  commit: "eb6368ec8cd3dde7aeb3fe28d2fea68c4b453136"
+  commit: "11a43fe1ef8b4c23aff9f24c218412d15cca54fd"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/ttf/Baskervville-Regular.ttf"
+    dest_file: "Baskervville-Regular.ttf"
+  }
+  files {
+    source_file: "fonts/ttf/Baskervville-Italic.ttf"
+    dest_file: "Baskervville-Italic.ttf"
+  }
+  branch: "master"
 }

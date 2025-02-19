@@ -14,11 +14,11 @@ region: "NL"
 region: "SR"
 region: "SX"
 exemplar_chars {
-  base: "a á ä b c d e é ë f g h i í ï {ij} {íj́} j k l m n o ó ö p q r s t u ú ü v w x y z"
-  auxiliary: "à â å ã æ ç è ê î ñ ô ø œ ù û ÿ"
+  base: "A Á Ä B C D E É Ë F G H I Í Ï {IJ} {ÍJ} {ÍJ́} J K L M N O Ó Ö P Q R S T U Ú Ü V W X Y Ý Z a á ä b c d e é ë f g h i í ï {ij} {íj} {íj́} j k l m n o ó ö p q r s t u ú ü v w x y ý z"
+  auxiliary: "À Â Å Ã Æ Ç È Ê Ì Î Ĳ Ñ Ò Ô Ø Œ Ù Û Ÿ à â å ã æ ç è ê ì î ĳ ñ ò ô ø œ ù û ÿ"
   marks: "◌̀ ◌́ ◌̂ ◌̈"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] § @ * / & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] @ * / & #"
   index: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 }
 sample_text {

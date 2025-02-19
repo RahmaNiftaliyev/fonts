@@ -1,5 +1,5 @@
 name: "Rubik"
-designer: "Hubert and Fischer, Meir Sadan, Cyreal"
+designer: "Hubert and Fischer, Meir Sadan, Cyreal, Daniel Grumer, Omaima Dajani"
 license: "OFL"
 category: "SANS_SERIF"
 date_added: "2015-07-22"
@@ -21,6 +21,7 @@ fonts {
   full_name: "Rubik Light Italic"
   copyright: "Copyright 2015 The Rubik Project Authors (https://github.com/googlefonts/rubik)"
 }
+subsets: "arabic"
 subsets: "cyrillic"
 subsets: "cyrillic-ext"
 subsets: "hebrew"
@@ -34,5 +35,18 @@ axes {
 }
 source {
   repository_url: "https://github.com/googlefonts/rubik"
-  commit: "bfad6be1331a45f40f92868c9bfafac9b46b5fd8"
+  commit: "e337a5f69a9bea30e58d05bd40184d79cc099628"
+  files {
+    source_file: "OFL.txt"
+    dest_file: "OFL.txt"
+  }
+  files {
+    source_file: "fonts/variable/Rubik-Italic[wght].ttf"
+    dest_file: "Rubik-Italic[wght].ttf"
+  }
+  files {
+    source_file: "fonts/variable/Rubik[wght].ttf"
+    dest_file: "Rubik[wght].ttf"
+  }
+  branch: "main"
 }

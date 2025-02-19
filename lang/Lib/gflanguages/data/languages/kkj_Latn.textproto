@@ -6,10 +6,13 @@ autonym: "Kakɔ"
 population: 149823
 region: "CM"
 exemplar_chars {
-  base: "a á à â {a̧} b ɓ c d ɗ {ɗy} e é è ê ɛ {ɛ́} {ɛ̀} {ɛ̂} {ɛ̧} f g {gb} {gw} h i í ì î {i̧} j k {kp} {kw} l m {mb} n {nd} ǌ {ny} ŋ {ŋg} {ŋgb} {ŋgw} o ó ò ô ɔ {ɔ́} {ɔ̀} {ɔ̂} {ɔ̧} p r s t u ú ù û {u̧} v w y A Á À Â {A̧} B Ɓ C D Ɗ {Ɗy} E É È Ê Ɛ {Ɛ́} {Ɛ̀} {Ɛ̂} {Ɛ̧} F G {Gb} {Gw} H I Í Ì Î {I̧} J K {Kp} {Kw} L M {Mb} N {Nd} Ǌ {Ny} Ŋ {Ŋg} {Ŋgb} {Ŋgw} O Ó Ò Ô Ɔ {Ɔ́} {Ɔ̀} {Ɔ̂} {Ɔ̧} P R S T U Ú Ù Û {U̧} V W Y"
+  base: "a á à â {a̧} b ɓ c d ɗ {ɗy} e é è ê ɛ {ɛ́} {ɛ̀} {ɛ̂} {ɛ̧} f g {gb} {gw} h i í ì î {i̧} j k {kp} {kw} l m {mb} n {nd} {nj} {ny} ŋ {ŋg} {ŋgb} {ŋgw} o ó ò ô ɔ {ɔ́} {ɔ̀} {ɔ̂} {ɔ̧} p r s t u ú ù û {u̧} v w y A Á À Â {A̧} B Ɓ C D Ɗ {Ɗy} E É È Ê Ɛ {Ɛ́} {Ɛ̀} {Ɛ̂} {Ɛ̧} F G {Gb} {Gw} H I Í Ì Î {I̧} J K {Kp} {Kw} L M {Mb} N {Nd} {NJ} {Ny} Ŋ {Ŋg} {Ŋgb} {Ŋgw} O Ó Ò Ô Ɔ {Ɔ́} {Ɔ̀} {Ɔ̂} {Ɔ̧} P R S T U Ú Ù Û {U̧} V W Y"
   auxiliary: "q Q x X z Z"
-  marks: "◌́ ◌̀ ◌̂ ◌̧ ◌̌"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
+  marks: "◌́ ◌̀ ◌̂ ◌̧"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
   punctuation: ", : ! ? . … ‘ ‹ › “ ” « » ( ) *"
-  index: "A B Ɓ C D Ɗ {Ɗy} E Ɛ F G {Gb} {Gw} H I {I̧} J K {Kp} {Kw} L M {Mb} N {Nd} ǋ {Ny} Ŋ {Ŋg} {Ŋgb} {Ŋgw} O Ɔ {Ɔ̧} P R S T U {U̧} V W Y"
+  index: "A B Ɓ C D Ɗ {Ɗy} E Ɛ F G {Gb} {Gw} H I {I̧} J K {Kp} {Kw} L M {Mb} N {Nd} {Nj} {Ny} Ŋ {Ŋg} {Ŋgb} {Ŋgw} O Ɔ {Ɔ̧} P R S T U {U̧} V W Y"
 }
+note: "West Kako doesn’t use ɛ̧ o̧. Tones are only marked with ◌́ ◌̀ ◌̂ when there is an ambiguity."
+source: "Ernst Urs, Alphabet et orthographe du kakɔ (kakɔ-est), SIL Cameroun, 1996"
+source: "Ernst Urs, Alphabet et orthographe du mbonjɔɔ (kakɔ-ouest), SIL Cameroun, 1996"

@@ -1,5 +1,5 @@
 name: "Pushster"
-designer: "Andyj"
+designer: "Sir Andyj"
 license: "OFL"
 category: "DISPLAY"
 date_added: "2019-04-01"
@@ -15,8 +15,13 @@ fonts {
 subsets: "latin"
 subsets: "latin-ext"
 subsets: "menu"
-minisite_url: "https://fonts.google.com/icons"
-primary_script: "Thai"
+source {
+  repository_url: "https://github.com/impallari/The-Lobster-Font"
+}
 languages: "en_Latn"  # English
 languages: "eo_Latn"  # Esperanto
-primary_language: "en_Latn"  # Esperanto
+minisite_url: "https://fonts.google.com/icons"
+primary_script: "Thai"
+primary_language: "en_Latn"
+classifications: "DISPLAY"
+classifications: "HANDWRITING"

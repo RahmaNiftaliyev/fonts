@@ -8,11 +8,11 @@ region: "BO"
 region: "EC"
 region: "PE"
 exemplar_chars {
-  base: "a {ch} {chʼ} h i k {kʼ} l {ll} m n ñ p {pʼ} q {qʼ} s t {tʼ} u w y"
-  auxiliary: "á à ă â å ä ã ā æ b c ç d e é è ĕ ê ë ē f g í ì ĭ î ï ī j o ó ò ŏ ô ö ø ō œ r ú ù ŭ û ü ū v x ÿ z"
+  base: "A {CH} {CHʼ} H I K {Kʼ} L {LL} M N Ñ P {Pʼ} Q {Qʼ} S T {Tʼ} U W Y a {ch} {chʼ} h i k {kʼ} l {ll} m n ñ p {pʼ} q {qʼ} s t {tʼ} u w y"
+  auxiliary: "Á À Ă Â Å Ä Ã Ā Æ B C Ç D E É È Ĕ Ê Ë Ē F G Í Ì Ĭ Î Ï Ī J O Ó Ò Ŏ Ô Ö Ø Ō Œ R Ú Ù Ŭ Û Ü Ū V X Ÿ Z á à ă â å ä ã ā æ b c ç d e é è ĕ ê ë ē f g í ì ĭ î ï ī j o ó ò ŏ ô ö ø ō œ r ú ù ŭ û ü ū v x ÿ z"
   marks: "◌̃ ◌̂ ◌̌"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] § @ * / & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] @ * / & #"
   index: "A {Ch} H I K L {Ll} M N Ñ P Q S T U W Y"
 }
 sample_text {

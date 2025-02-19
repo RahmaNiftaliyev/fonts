@@ -6,11 +6,11 @@ autonym: "Frysk"
 population: 743057
 region: "NL"
 exemplar_chars {
-  base: "a á à â ä b c d e é è ê ë f g h i í ï {ij} {íj́} j k l m n o ó ô ö p r s t u ú û ü v w y ý z"
-  auxiliary: "æ ò ù"
+  base: "A Á À Â Ä B C D E É È Ê Ë F G H I Í Ï Y Ý J K L M N O Ó Ô Ö P R S T U Ú Û Ü V W Z a á à â ä b c d e é è ê ë f g h i í ï y ý j k l m n o ó ô ö p r s t u ú û ü v w z"
+  auxiliary: "Æ Ò Ù æ ò ù"
   marks: "◌́ ◌̂ ◌̈"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] § @ * / & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ? . … \' ‘ ’ \" “ ” ( ) [ ] @ * / & #"
   index: "A B C D E F G H I J K L M N O P R S T U V W X Z"
 }
 sample_text {

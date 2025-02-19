@@ -16,10 +16,11 @@ region: "NG"
 region: "SL"
 region: "SN"
 exemplar_chars {
-  base: "𞥄𞥅𞥆 𞤢 𞤣 𞤤 𞤥 𞤦 𞤧 𞤨 𞤩 𞤪 𞤫 𞤬 𞤭 𞤮 𞤯 𞤰 𞤱 𞤲 𞤳 𞤴 𞤵 𞤶 𞤷 𞤸 𞤹 𞤺 𞤻 𞤼 𞤽 𞥋"
+  base: "𞤢 𞤣 𞤤 𞤥 𞤦 𞤧 𞤨 𞤩 𞤪 𞤫 𞤬 𞤭 𞤮 𞤯 𞤰 𞤱 𞤲 𞤳 𞤴 𞤵 𞤶 𞤷 𞤸 𞤹 𞤺 𞤻 𞤼 𞤽"
+  marks: "𞥄 𞥅 𞥆 𞥋"
   auxiliary: "𞤾 𞤿 𞥀 𞥁 𞥂 𞥃"
   numerals: "𞥐 𞥑 𞥒 𞥓 𞥔 𞥕 𞥖 𞥗 𞥘 𞥙"
-  punctuation: "- ‑ 𞥞 𞥟 . % ‰"
+  punctuation: "- 𞥞 𞥟 . % "
   index: "𞤀 𞤛"
 }
 sample_text {

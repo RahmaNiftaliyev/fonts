@@ -150,11 +150,14 @@ def _fvar_dflts(ttFont):
     res = OrderedDict()
     for a in ttFont["fvar"].axes:
         fallback = axis_registry.fallback_for_value(a.axisTag, a.defaultValue)
-        if fallback:
+        if a.axisTag == "opsz":
+            name = f"{int(a.defaultValue)}pt"
+            elided = True
+        elif fallback:
             name = fallback.name
             elided = fallback.value == axis_registry[
                 a.axisTag
-            ].default_value and name not in ["Regular", "Italic"]
+            ].default_value and name not in ["Regular", "Italic", "14pt"]
         else:
             name = None
             elided = True  # since we can't find a name for it, keep it elided
@@ -210,13 +213,17 @@ def build_stat(ttFont, sibling_ttFonts=[]):
                     "name": fallback.name,
                     "value": fallback.value,
                     # include flags and linked values
-                    "flags": 0x2
-                    if fallback.value == axis_registry[axis].default_value
-                    else 0x0,
+                    "flags": (
+                        0x2
+                        if fallback.value == axis_registry[axis].default_value
+                        else 0x0
+                    ),
                 }
             )
             if axis in LINKED_VALUES and fallback.value in LINKED_VALUES[axis]:
-                a["values"][-1]["linkedValue"] = LINKED_VALUES[axis][fallback.value]
+                linked_value = LINKED_VALUES[axis][fallback.value]
+                if any(f.value == linked_value for f in fallbacks):
+                    a["values"][-1]["linkedValue"] = linked_value
         res.append(a)
 
     for axis, fallback in fallbacks_in_names:
@@ -228,7 +235,8 @@ def build_stat(ttFont, sibling_ttFonts=[]):
             "values": [{"name": fallback.name, "value": fallback.value, "flags": 0x0}],
         }
         if axis in LINKED_VALUES and fallback.value in LINKED_VALUES[axis]:
-            a["values"][0]["linkedValue"] = LINKED_VALUES[axis][fallback.value]
+            linked_value = LINKED_VALUES[axis][fallback.value]
+            a["values"][0]["linkedValue"] = linked_value
         res.append(a)
 
     for axis, fallback in fallbacks_in_siblings:
@@ -249,14 +257,38 @@ def build_stat(ttFont, sibling_ttFonts=[]):
     buildStatTable(ttFont, res, macNames=False)
 
 
-def build_name_table(ttFont, family_name=None, style_name=None, siblings=[]):
+def build_name_table(
+    ttFont, family_name=None, style_name=None, siblings=[], aggressive=True
+):
+    from fontTools.varLib.instancer import setRibbiBits
+
     log.info("Building name table")
     name_table = ttFont["name"]
     family_name = family_name if family_name else name_table.getBestFamilyName()
     style_name = style_name if style_name else name_table.getBestSubFamilyName()
     if is_variable(ttFont):
-        return build_vf_name_table(ttFont, family_name, siblings=siblings)
-    return build_static_name_table_v1(ttFont, family_name, style_name)
+        build_vf_name_table(
+            ttFont, family_name, siblings=siblings, aggressive=aggressive
+        )
+    else:
+        build_static_name_table_v1(
+            ttFont, family_name, style_name, aggressive=aggressive
+        )
+
+    # Set bits
+    style_name = name_table.getBestSubFamilyName()
+    # usWeightClass
+    weight_seen = False
+    for weight in sorted(GF_STATIC_STYLES, key=lambda k: len(k), reverse=True):
+        if weight in style_name:
+            weight_seen = True
+            ttFont["OS/2"].usWeightClass = GF_STATIC_STYLES[weight]
+            break
+    if not weight_seen:
+        log.warning(
+            f"No known weight found for stylename {style_name}. Cannot set OS2.usWeightClass"
+        )
+    setRibbiBits(ttFont)
 
 
 def _fvar_instance_collisions(ttFont, siblings=[]):
@@ -273,14 +305,16 @@ def _fvar_instance_collisions(ttFont, siblings=[]):
     return len(family_styles) != len(set(family_styles))
 
 
-def build_vf_name_table(ttFont, family_name, siblings=[]):
+def build_vf_name_table(ttFont, family_name, siblings=[], aggressive=True):
     # VF name table should reflect the 0 origin of the font!
     assert is_variable(ttFont), "Not a VF!"
     style_name = _vf_style_name(ttFont, family_name)
     if _fvar_instance_collisions(ttFont, siblings):
-        build_static_name_table_v1(ttFont, family_name, style_name)
+        build_static_name_table_v1(
+            ttFont, family_name, style_name, aggressive=aggressive
+        )
     else:
-        build_static_name_table(ttFont, family_name, style_name)
+        build_static_name_table(ttFont, family_name, style_name, aggressive=aggressive)
     build_variations_ps_name(ttFont, family_name)
 
 
@@ -377,6 +411,7 @@ def build_fvar_instances(ttFont, axis_dflts={}):
 
     def gen_instances(is_italic):
         results = []
+        family_name = name_table.getBestFamilyName()
         for fallback in wght_fallbacks:
             name = fallback.name if not is_italic else f"{fallback.name} Italic".strip()
             name = name.replace("Regular Italic", "Italic")
@@ -392,6 +427,9 @@ def build_fvar_instances(ttFont, axis_dflts={}):
 
             inst = NamedInstance()
             inst.subfamilyNameID = name_table.addName(name)
+            inst.postscriptNameID = name_table.addName(
+                f"{family_name}-{name}".replace(" ", "")
+            )
             inst.coordinates = coordinates
             log.debug(f"Adding fvar instance: {name}: {coordinates}")
             results.append(inst)
@@ -408,11 +446,12 @@ def build_fvar_instances(ttFont, axis_dflts={}):
     fvar.instances = instances
 
 
-def build_static_name_table(ttFont, family_name, style_name):
+def build_static_name_table(ttFont, family_name, style_name, aggressive=True):
     # stip mac names
     name_table = ttFont["name"]
     name_table.removeNames(platformID=1)
     existing_name = ttFont["name"].getBestFamilyName()
+    removed_names = {}
 
     names = {}
     is_ribbi = (
@@ -431,6 +470,7 @@ def build_static_name_table(ttFont, family_name, style_name):
             21,
             22,
         ):
+            removed_names[name_id] = name_table.getDebugName(name_id)
             name_table.removeNames(nameID=name_id)
     else:
         style_tokens = style_name.split()
@@ -453,7 +493,22 @@ def build_static_name_table(ttFont, family_name, style_name):
         names[(NameID.TYPOGRAPHIC_SUBFAMILY_NAME, 3, 1, 0x409)] = style_name
         # we do not use WWS names since we use the RIBBI naming schema
         for name_id in (21, 22):
+            removed_names[name_id] = name_table.getDebugName(name_id)
             name_table.removeNames(nameID=name_id)
+
+    # If STAT table was using any removed names, add then back with a new ID
+    if "STAT" in ttFont and removed_names:
+        if ttFont["STAT"].table.AxisValueArray:
+            for av in ttFont["STAT"].table.AxisValueArray.AxisValue:
+                if av.ValueNameID in removed_names:
+                    av.ValueNameID = name_table.addMultilingualName(
+                        {"en": removed_names[av.ValueNameID]}
+                    )
+        for av in ttFont["STAT"].table.DesignAxisRecord.Axis:
+            if av.AxisNameID in removed_names:
+                av.AxisNameID = name_table.addMultilingualName(
+                    {"en": removed_names[av.AxisNameID]}
+                )
 
     names[(NameID.UNIQUE_FONT_IDENTIFIER, 3, 1, 0x409)] = _updateUniqueIdNameRecord(
         ttFont, {k[0]: v for k, v in names.items()}, (3, 1, 0x409)
@@ -463,23 +518,26 @@ def build_static_name_table(ttFont, family_name, style_name):
         name_table.setName(v, *k)
 
     # Replace occurences of old family name in untouched records
-    skip_ids = [i.numerator for i in NameID]
-    for r in ttFont["name"].names:
-        if r.nameID in skip_ids:
-            continue
-        current = r.toUnicode()
-        if existing_name not in current:
-            continue
-        if " " not in current:
-            replacement = current.replace(existing_name, family_name).replace(" ", "")
-        else:
-            replacement = current.replace(existing_name, family_name)
-        ttFont["name"].setName(
-            replacement, r.nameID, r.platformID, r.platEncID, r.langID
-        )
+    if aggressive:
+        skip_ids = [i.numerator for i in NameID]
+        for r in ttFont["name"].names:
+            if r.nameID in skip_ids:
+                continue
+            current = r.toUnicode()
+            if existing_name not in current:
+                continue
+            if " " not in current:
+                replacement = current.replace(existing_name, family_name).replace(
+                    " ", ""
+                )
+            else:
+                replacement = current.replace(existing_name, family_name)
+            ttFont["name"].setName(
+                replacement, r.nameID, r.platformID, r.platEncID, r.langID
+            )
 
 
-def build_static_name_table_v1(ttFont, family_name, style_name):
+def build_static_name_table_v1(ttFont, family_name, style_name, aggressive=True):
     """Pre VF name tables, this version can only accept wght + ital"""
     non_weight_tokens = []
     v1_tokens = []
@@ -504,7 +562,7 @@ def build_static_name_table_v1(ttFont, family_name, style_name):
     style_name = style_name or "Regular"
     log.debug(f"New family name: {family_name}")
     log.debug(f"New style name: {style_name}")
-    build_static_name_table(ttFont, family_name, style_name)
+    build_static_name_table(ttFont, family_name, style_name, aggressive)
 
 
 def build_filename(ttFont):

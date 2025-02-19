@@ -7,11 +7,11 @@ population: 3515529
 region: "ES"
 region: "PT"
 exemplar_chars {
-  base: "a á b c d e é f g h i í ï j k l m n ñ o ó p q r s t u ú ü v w x y z"
-  auxiliary: "ª à ă â å ä ã ā æ ɑ ç è ĕ ê ë ē ì ĭ î ī º ò ŏ ô ö õ ø ō œ ù ŭ û ū"
+  base: "A Á B C D E É F G H I Í Ï J K L M N Ñ O Ó P Q R S T U Ú Ü V W X Y Z a á b c d e é f g h i í ï j k l m n ñ o ó p q r s t u ú ü v w x y z"
+  auxiliary: "À Ă Â Å Ä Ã Ā Æ Ɑ Ç È Ĕ Ê Ë Ē Ì Ĭ Î Ī Ò Ŏ Ô Ö Õ Ø Ō Œ Ù Ŭ Û Ū ª à ă â å ä ã ā æ ɑ ç è ĕ ê ë ē ì ĭ î ī º ò ŏ ô ö õ ø ō œ ù ŭ û ū"
   marks: "◌́ ◌̃ ◌̈"
-  numerals: "- ‑ , . % ‰ + 0 1 2 3 4 5 6 7 8 9"
-  punctuation: "- ‐ ‑ – — , ; : ! ¡ ? ¿ . … \' ‘ ’ \" “ ” « » ( ) [ ] § @ * / \\ & # † ‡ ′ ″"
+  numerals: "- , . % + 0 1 2 3 4 5 6 7 8 9"
+  punctuation: "- – — , ; : ! ¡ ? ¿ . … \' ‘ ’ \" “ ” « » ( ) [ ] @ * / \\ & #"
   index: "A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z"
 }
 sample_text {

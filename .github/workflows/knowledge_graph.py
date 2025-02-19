@@ -1,3 +1,4 @@
+from pprint import pprint
 from absl import app
 from absl import flags
 from gftools import knowledge_pb2
@@ -9,6 +10,9 @@ from pathlib import Path
 import re
 import sys
 from typing import Callable, Iterable, List, Mapping, NamedTuple, Optional, Tuple, Set, Union
+import requests
+from functools import lru_cache
+from urllib.parse import urlparse
 
 
 MAX_RASTER_IMAGE_SIZE_KB = 800
@@ -65,6 +69,7 @@ FLAGS = flags.FLAGS
 
 
 flags.DEFINE_bool("print_valid", False, "Whether to print valid links")
+flags.DEFINE_bool("check_outbound_links", False, "Check outbound urls")
 
 
 MdValue = Union[Mapping[str, "MdValue"]]
@@ -119,7 +124,7 @@ class KnowledgeContent(NamedTuple):
 
 
 def _markdown_ast(md_file: Path) -> List[MdValue]:
-    return mistune.create_markdown(renderer=mistune.AstRenderer())(md_file.read_text())
+    return mistune.create_markdown(renderer='ast')(md_file.read_text())
 
 
 def _ast_iter(root: List[MdValue], filter_fn: Callable[[MdValue], bool]) -> Iterable[MdValue]:
@@ -169,20 +174,90 @@ def _check_contributor(repo_root: Path, referrer: Path, ref: str, contributors: 
     return _maybe_print_check(ref in contributors, repo_root, referrer, ref, None)
 
 
+def _check_md_file_contents(repo_root: Path, md_file: Path, ast: List[MdValue]) -> bool:
+    for el in _ast_iter(ast, lambda v: v.get("type", None) == "inline_html"):
+        text = el.get("text", "")
+        if re.search(' id="[^"]+"', text):
+            print("INVALID ", _safe_relative_to(repo_root, md_file), "attr.id not allowed:", text)
+            return False
+    f = open(md_file,"r")
+    content = "".join(f.readlines())
+    if re.search('</figcaption>(?!.*</figure>)', content, re.MULTILINE | re.DOTALL):
+        print("INVALID ", _safe_relative_to(repo_root, md_file), "Cannot have a <figcaption> outside of a <figure>")
+        return False
+    f.close()
+    return True
+
+
+@lru_cache()
+def _check_outbound_link(url: str):
+    # Following urls work correctly on a web browser but raise a 400 code when using python requests
+    whitelist = frozenset([
+        'circuitousroot.com',
+        'codepen.io',
+        'colourblindawareness.org',
+        'cortezlawfirmpllc.com',
+        'doi.org',
+        'figma.com',
+        'freepik.com',
+        'gigapress.net',
+        'help.figma.com',
+        'kupferschrift.de',
+        'languagegeek.com',
+        'layoutgridcalculator.com',
+        'medium.com',
+        'medium.engineering',
+        'nedwin.medium.com',
+        'nytimes.com',
+        'paulshawletterdesign.com',
+        'psycnet.apa.org',
+        'researchgate.net',
+        'sciencedirect.com',
+        'support.google.com',
+        'twitter.com',
+        'typetura.com',
+        'webmd.com',
+        "jessicahische.is",
+        "type.method.ac",
+        "dev.epicgames.com", # Returns a 403 response when using requests
+    ])
+    # Following urls will be fixed at a later date. If the CI is failing and a suitable
+    # replacement url cannot be found, please add them to this set.
+    to_fix = frozenset([
+        # bad SSL cert
+        "clagnut.com",
+        "xinreality.com"
+    ])
+    if urlparse(url).netloc.replace("www.", "") in whitelist | to_fix:
+        return True
+
+    response = requests.head(url, allow_redirects=True, timeout=30)
+    if not response.ok:
+        print(f"INVALID url {url}' returned response status code '{response.status_code}'")
+    return response.ok
+
+
 def _check_md_files(knowledge: KnowledgeContent) -> bool:
     result = True
     for md_file in knowledge.md_files:
         ast = _markdown_ast(md_file)
+        result = _check_md_file_contents(knowledge.repo_root, md_file, ast) and result
         for link in _ast_iter(ast, lambda v: v.get("type", None) == "link"):
-            target = link.get("link", "")
+            target = link["attrs"]["url"]
+            # mistune cannot parse urls that end with a closing parenthesis,
+            # https://github.com/lepture/mistune/issues/355
+            # A possible fix is to do some regex acrobatics in:
+            # https://github.com/lepture/mistune/blob/master/src/mistune/helpers.py#L12-L18,
+            if "(" in target:
+                target += ")"
             if not target:
                 continue  # TODO: are empty links bad
             if re.search("^http(s)?://", target.lower()):
-                continue  # we aren't in the business of validating outbound links
-
-            target_path = knowledge.link_target_to_path(target)
-            result = _check_file_present(knowledge.repo_root, md_file, target, target_path) and result
-
+                if FLAGS.check_outbound_links:
+                    result = _check_outbound_link(target) and result
+            else:
+                target_path = knowledge.link_target_to_path(target)
+                result = _check_file_present(knowledge.repo_root, md_file, target, target_path) and result
     return result
 
 
@@ -252,9 +327,10 @@ def _check_image_files(knowledge: KnowledgeContent) -> bool:
     result = True
     image_files = list(knowledge.knowledge_dir.glob("**/images/*"))
     for image_file in image_files:
+        st_size = image_file.stat().st_size
         if _is_svg(image_file):
-            if image_file.stat().st_size > MAX_VECTOR_IMAGE_SIZE_KB * 1024:
-                print("File exceeds max size of %s KB:" % MAX_VECTOR_IMAGE_SIZE_KB, image_file.relative_to(knowledge.knowledge_dir))
+            if st_size > MAX_VECTOR_IMAGE_SIZE_KB * 1024:
+                print("File exceeds max size of %s KB (%s KB):" % (MAX_VECTOR_IMAGE_SIZE_KB, st_size // 1024), image_file.relative_to(knowledge.knowledge_dir))
                 result = False
             root = minidom.parseString(image_file.read_text()).documentElement
             if root.tagName != "svg":
@@ -270,8 +346,8 @@ def _check_image_files(knowledge: KnowledgeContent) -> bool:
                     print("Must specify offset on <stop>:", image_file.relative_to(knowledge.knowledge_dir))
                     result = False
         else:
-            if image_file.stat().st_size > MAX_RASTER_IMAGE_SIZE_KB * 1024:
-                print("File exceeds max size of %s KB:" % MAX_RASTER_IMAGE_SIZE_KB, image_file.relative_to(knowledge.knowledge_dir))
+            if st_size > MAX_RASTER_IMAGE_SIZE_KB * 1024:
+                print("File exceeds max size of %s KB (%s KB):" % (MAX_RASTER_IMAGE_SIZE_KB, st_size // 1024), image_file.relative_to(knowledge.knowledge_dir))
                 result = False
     return result
 
